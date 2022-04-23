@@ -1,6 +1,6 @@
-class User:
+class Credential:
     """
-    Class that generates new instances of user
+    Class that generates new instances of Credential
     """
 
     pass
