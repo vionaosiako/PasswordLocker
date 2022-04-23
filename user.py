@@ -51,11 +51,18 @@ class User:
         Args:
             username: username to search if it exists
         Returns :
-            Boolean: True or false depending if the contact exists
+            Boolean: True or false depending if the user exists
         '''
         for user in cls.user_list:
             if user.username == username:
                     return True
 
-        return False        
+        return False 
+    
+    @classmethod
+    def display_user(cls):
+        '''
+        method that returns the user list
+        '''
+        return cls.user_list
     
