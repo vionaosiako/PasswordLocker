@@ -43,4 +43,17 @@ class User:
         for user in cls.user_list:
             if user.username == username:
                 return user
-        
+            
+    #check if a user object actually exists   
+    def test_user_exists(self):
+        '''
+        test to check if we can return a Boolean  if we cannot find the contact.
+        '''
+
+        self.new_user.save_user()
+        test_user = User("Test","user","vee","vee") # new user
+        test_user.save_user()
+
+        user_exists = User.user_exist("vee")
+
+        self.assertTrue(user_exists)
